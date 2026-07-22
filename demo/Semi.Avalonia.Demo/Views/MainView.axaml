@@ -52,13 +52,13 @@
                 <SelectableTextBlock
                     VerticalAlignment="Center"
                     Classes="H6"
-                    Text="Semi Avalonia"
+                    Text="{Binding AppName^}"
                     Theme="{DynamicResource TitleSelectableTextBlock}" />
                 <TextBlock VerticalAlignment="Center" Text="/" />
                 <SelectableTextBlock
                     VerticalAlignment="Center"
                     Classes="Secondary"
-                    Text="{Binding SelectedPageTitle}" />
+                    Text="{Binding SelectedPageTitle^}" />
             </StackPanel>
         </DrawerPage.Header>
 
@@ -66,7 +66,7 @@
             <TextBox
                 Margin="8"
                 Classes="ClearButton"
-                PlaceholderText="Search demos or sections"
+                PlaceholderText="{Binding SearchPlaceholder^}"
                 Text="{Binding SearchText}" />
         </DrawerPage.DrawerHeader>
 
@@ -77,7 +77,7 @@
                         <ItemsControl.ItemTemplate>
                             <DataTemplate DataType="vm:NavigationSectionViewModel">
                                 <StackPanel Margin="0,0,0,10">
-                                    <TextBlock Classes="NavSectionHeader" Text="{Binding Header}" />
+                                    <TextBlock Classes="NavSectionHeader" Text="{Binding Header^}" />
                                     <ItemsControl ItemsSource="{Binding Items}">
                                         <ItemsControl.ItemTemplate>
                                             <DataTemplate DataType="vm:NavigationItemViewModel">
@@ -88,7 +88,7 @@
                                                         Classes.Selected="{Binding IsSelected}"
                                                         Command="{Binding NavigateCommand}"
                                                         CommandParameter="{Binding}"
-                                                        Content="{Binding Title}" />
+                                                        Content="{Binding Title^}" />
                                                 </Border>
                                             </DataTemplate>
                                         </ItemsControl.ItemTemplate>
@@ -102,7 +102,7 @@
                         Margin="16,12,16,0"
                         Foreground="{DynamicResource SemiColorText1}"
                         IsVisible="{Binding ShowEmptySearchState}"
-                        Text="No demo pages matched your search." />
+                        Text="{Binding EmptySearchMessage^}" />
                 </StackPanel>
             </ScrollViewer>
         </DrawerPage.Drawer>
@@ -133,7 +133,7 @@
                     </Button.Flyout>
                     <Button.Styles>
                         <Style x:DataType="vm:MenuItemViewModel" Selector="MenuItem">
-                            <Setter Property="Header" Value="{Binding Header}" />
+                            <Setter Property="Header" Value="{Binding Header^}" />
                             <Setter Property="ItemsSource" Value="{Binding Items}" />
                             <Setter Property="Command" Value="{Binding Command}" />
                             <Setter Property="CommandParameter" Value="{Binding CommandParameter}" />
