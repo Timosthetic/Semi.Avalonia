@@ -12,7 +12,7 @@
     <PackageVersion Include="Avalonia.Controls.ColorPicker" Version="$(AvaloniaVersion)"/>
     <PackageVersion Include="Avalonia.Controls.DataGrid" Version="$(DataGridVersion)"/>
     <PackageVersion Include="Avalonia.Controls.TreeDataGrid" Version="11.1.1"/>
-    <PackageVersion Include="Irihi.Avalonia.Shared" Version="0.4.0"/>
+    <PackageVersion Include="Irihi.Avalonia.Shared" Version="0.5.0"/>
     <!--demo-->
     <PackageVersion Include="Avalonia.Android" Version="$(AvaloniaVersion)"/>
     <PackageVersion Include="Avalonia.Browser" Version="$(AvaloniaVersion)"/>
@@ -21,7 +21,7 @@
     <PackageVersion Include="Avalonia.LinuxFramebuffer" Version="$(AvaloniaVersion)"/>
     <PackageVersion Include="AvaloniaUI.DiagnosticsSupport" Version="2.2.3"/>
     <PackageVersion Include="CommunityToolkit.Mvvm" Version="8.4.2"/>
-    <PackageVersion Include="Irihi.Lingua" Version="0.6.0"/>
-    <PackageVersion Include="Xamarin.AndroidX.Core.SplashScreen" Version="1.2.0.2"/>
+    <PackageVersion Include="Irihi.Lingua" Version="1.0.0"/>
+    <PackageVersion Include="Xamarin.AndroidX.Core.SplashScreen" Version="1.2.0.3"/>
   </ItemGroup>
 </Project>
